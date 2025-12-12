@@ -1,0 +1,18 @@
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+model WaitlistSubmission {
+    id           Int    @id @default(autoincrement())
+    email        String @unique
+    phone_number String @unique
+    first_name   String
+    last_name    String
+
+    created_at DateTime @default(now())
+}
