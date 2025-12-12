@@ -42,7 +42,7 @@ export default function Home() {
         <source src="/iconec_video.mp4" type="video/mp4" />
       </video>
 
-      <div className="z-10 backdrop-blur-lg size-full flex items-center justify-center">
+      <div className="z-10 bg-black/30 size-full flex items-center justify-center">
         <div className="flex flex-col items-center text-center gap-6 z-10">
           <Image src="/iconec_logo.png" alt="Iconec logo" width={240} height={89.02} />
 

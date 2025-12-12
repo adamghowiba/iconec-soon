@@ -7,7 +7,21 @@ export async function POST(request: Request) {
   const waitlistData = waitlistSchema.safeParse(data);
 
   if (!waitlistData.success) {
-    return new Response(JSON.stringify({ error: waitlistData.error.issues.map(issue => issue.message).join(', ') }), { status: 400 });
+    return new Response(JSON.stringify({ error: waitlistData.error.issues.map(issue => issue.message).join(', ') }), {
+      status: 400,
+    });
+  }
+
+  const existingSubmission = await prisma.waitlistSubmission.findFirst({
+    where: {
+      OR: [{ email: data.email }, { phone_number: data.phone_number }],
+    },
+  });
+
+  if (existingSubmission) {
+    return new Response(JSON.stringify({ error: 'You have already joined the waitlist.' }), {
+      status: 400,
+    });
   }
 
   await prisma.waitlistSubmission.create({
