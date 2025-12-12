@@ -10,7 +10,6 @@ export const PhoneInput: FC<PhoneInputProps> = ({ value, onValueChange, ...props
   const { inputValue, handlePhoneValueChange, inputRef } = usePhoneInput({
     defaultCountry: 'ae',
     value: value as string,
-    forceDialCode: true,
     onChange: data => {
       onValueChange(data.phone || '');
     },
