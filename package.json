@@ -16,7 +16,7 @@
     "prisma": "^6.19.1",
     "react": "19.2.1",
     "react-dom": "19.2.1",
-    "react-phone-number-input": "^3.4.14",
+    "react-international-phone": "^4.6.1",
     "tailwind-merge": "^3.4.0",
     "tailwind-variants": "^3.2.2",
     "zod": "^4.1.13"

@@ -9,7 +9,7 @@ import { useForm } from '@tanstack/react-form';
 import { WaitlistSchema, waitlistSchema } from '@/form-schema';
 import { useMutation } from '@tanstack/react-query';
 import { CheckCircle } from './Icons/CheckCircle';
-import PhoneInput from 'react-phone-number-input/input';
+import { PhoneInput } from './PhoneInput';
 
 export interface ContactFormProps {
   isOpen?: boolean;
@@ -41,7 +41,7 @@ export const ContactForm: FC<ContactFormProps> = ({ isOpen = false, onClose }) =
     defaultValues: {
       first_name: '',
       last_name: '',
-      phone_number: '+971',
+      phone_number: '',
       email: '',
     } as WaitlistSchema,
     validators: {
@@ -159,12 +159,11 @@ export const ContactForm: FC<ContactFormProps> = ({ isOpen = false, onClose }) =
                         <label htmlFor={field.name}>Contact Number</label>
 
                         <PhoneInput
-                          international
-                          countryCallingCodeEditable={false}
-                          defaultCountry="AE"
-                          inputComponent={Input}
+                          id={field.name}
+                          name={field.name}
                           value={field.state.value}
-                          onChange={value => field.handleChange(value || '')}
+                          onValueChange={value => field.handleChange(value || '')}
+                          onBlur={field.handleBlur}
                         />
 
                         {!!field.state.meta.errors.length && field.state.meta.isTouched && (
