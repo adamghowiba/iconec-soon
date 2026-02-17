@@ -4,8 +4,8 @@ import Link from 'next/link';
 export default function LegalLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="w-full flex flex-col">
-      <Link href="/">
-        <button className="ml-auto absolute right-6 top-6 hover:bg-black/5 rounded-full p-1 flex items-center justify-center transition-colors cursor-pointer">
+      <Link href="/" className="ml-auto fixed right-6 top-6">
+        <button className="hover:bg-black/5 rounded-full p-1 flex items-center justify-center transition-colors cursor-pointer">
           <XIcon className="size-7 text-black" />
         </button>
       </Link>
