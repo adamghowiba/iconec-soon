@@ -6,6 +6,7 @@ import { Chip } from '@/components/Chip';
 import { Button } from '@/components/Button';
 import { ContactForm } from '@/components/ContactForm';
 import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -64,6 +65,16 @@ export default function Home() {
       </div>
 
       <ContactForm isOpen={open} onClose={() => setOpen(false)} />
+
+      <div className="absolute bottom-2 left-0 right-0 w-full flex items-center justify-center text-sm text-white/80 gap-6 z-10">
+        <span>© 2026 Iconec Jewelry LLC-FZ</span>
+
+        <div className="flex items-center gap-2">
+          <Link href="/legal/terms" className="hover:underline hover:text-white/90 transition-colors cursor-pointer">
+            Terms
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
