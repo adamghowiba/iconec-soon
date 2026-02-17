@@ -86,7 +86,7 @@ export const ContactForm: FC<ContactFormProps> = ({ isOpen = false, onClose }) =
             )}
             onClick={onClose}
           >
-            <XIcon className="text-red-500" />
+            <XIcon className="text-white-500" />
           </button>
 
           <div
