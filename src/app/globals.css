@@ -14,6 +14,7 @@
   --breakpoint-tablet: 64rem; /* 1024px */
 
   --font-sans: var(--font-oug);
+  --font-fraunces: var(--font-fraunces);
 }
 
 body {

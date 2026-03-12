@@ -45,9 +45,9 @@ export default function Home() {
 
       <div className="z-10 bg-black/30 size-full flex items-center justify-center">
         <div className="flex flex-col items-center text-center gap-6 z-10">
-          <Image src="/iconec_logo.png" alt="Iconec logo" width={240} height={89.02} />
+          <Image src="/iconec-logo.svg" alt="Iconec logo" width={240} height={92} />
 
-          <h1 className="text-lg text-white max-mobile:text-[15px]">Always. In. Trend.</h1>
+          <h1 className="text-lg text-white max-mobile:text-[15px] font-fraunces italic">Always In Trend</h1>
 
           <h2 className="text-lg text-[#FFFFFFB2] max-mobile:text-[15px] max-mobile:max-w-57.5">
             Affordable luxury lifestyle brand catering to your jewelry needs.
@@ -67,7 +67,7 @@ export default function Home() {
       <ContactForm isOpen={open} onClose={() => setOpen(false)} />
 
       <div className="absolute bottom-2 left-0 right-0 w-full flex items-center justify-center text-sm text-white/80 gap-6 z-10">
-        <span>© 2026 Iconec Jewelry LLC-FZ</span>
+        <span>© 2026 Iconec Jewelry LLC-FZ | 726 Tamani Arts Building - Al Asayel St - Business Bay - Dubai UAE</span>
 
         <div className="flex items-center gap-2">
           <Link href="/legal/terms" className="hover:underline hover:text-white/90 transition-colors cursor-pointer">
