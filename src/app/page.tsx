@@ -73,6 +73,9 @@ export default function Home() {
           <Link href="/legal/terms" className="hover:underline hover:text-white/90 transition-colors cursor-pointer">
             Terms
           </Link>
+          <Link href="/legal/privacy" className="hover:underline hover:text-white/90 transition-colors cursor-pointer">
+            Privacy
+          </Link>
         </div>
       </div>
     </div>
